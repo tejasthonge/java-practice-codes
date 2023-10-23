@@ -1,0 +1,68 @@
+
+// cursor:
+//
+// --it is meber or travalar like man on any elenment/object present in
+// collection
+// --we have abitlity to accese the element present in the collection
+// --by using cursor we have to chance of to proforms wherius opretions on
+// collectio eche element
+// --their are four type of cursor
+// --all theis three extedens(chidl of) iterable interface present in java.lang package
+
+/*
+javap java.lang.Iterable
+Compiled from "Iterable.java"
+public interface java.lang.Iterable<T> {
+  public abstract java.util.Iterator<T> iterator();
+  public default void forEach(java.util.function.Consumer<? super T>);
+  public default java.util.Spliterator<T> spliterator();
+}
+
+*/
+
+// ----1).Iterator (this is an universal)
+// ----2).ListIterator (this is only for the List interface chaild only)
+// ----3).Enumeration (this is for vector avd stack only)
+// ----4).Spliterator
+
+// ----1).Iterator (this is an universal)
+/*
+ * javap java.util.Iterator
+ * Compiled from "Iterator.java"
+ * public interface java.util.Iterator<E> {
+ * public abstract boolean hasNext();
+ * public abstract E next();
+ * public default void remove();
+ * public default void forEachRemaining(java.util.function.Consumer<? super E>);
+ * }
+ */
+
+// ----2).ListIterator (this is only for the List interface chaild only)
+/*
+ * javap java.util.ListIterator
+ * Compiled from "ListIterator.java"
+ * public interface java.util.ListIterator<E> extends java.util.Iterator<E> {
+ * public abstract boolean hasNext();
+ * public abstract E next();
+ * public abstract boolean hasPrevious();
+ * public abstract E previous();
+ * public abstract int nextIndex();
+ * public abstract int previousIndex();
+ * public abstract void remove();
+ * public abstract void set(E);
+ * public abstract void add(E);
+ * }
+ * 
+ */
+
+
+ // ----4).Spliterator:
+/*
+ * javap java.util.Enumeration
+ * Compiled from "Enumeration.java"
+ * public interface java.util.Enumeration<E> {
+ * public abstract boolean hasMoreElements();
+ * public abstract E nextElement();
+ * public default java.util.Iterator<E> asIterator();
+ * }
+ */
