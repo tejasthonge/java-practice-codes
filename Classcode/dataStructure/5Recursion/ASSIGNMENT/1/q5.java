@@ -31,10 +31,29 @@ class Rec{
 	//using rec
 
 	int count=0;
+	int i=0;
+	boolean flag = false;
 	boolean usingRec(int num){
 	
-	
-	
+		 i++;
+		if( i==num){
+			
+			return flag;
+		}
+
+		if(num%i==0)
+			count++;
+
+		usingRec(num);
+
+		//System.out.println(count);
+		if(count == 1){
+		
+			return true;
+
+		
+		}
+		return flag;
 	}
 
 	public static void main(String[] boss){
@@ -46,9 +65,10 @@ class Rec{
 		Rec obj = new Rec();
 
 		boolean ret1 = obj.usingFor(num);
-		System.out.println(num +" is prinme : " +ret1);
-
+		System.out.println(num +" is prime : " +ret1);
 	
+		boolean ret2 = obj.usingRec(num);
+		System.out.println(num +" is prime : "+ ret2);	
 	}
 
 }
